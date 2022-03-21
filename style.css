@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: rgb(18, 156, 156);
+}
+
+main {
+  padding: 1rem;
+  background-image: url("img/notes.png");
+  background-color: aqua;
+}
+
+header {
+  background-image: url("img/note.jpeg");
+  padding: 0.3rem 0.5rem;
+}
+
+header h2 {
+  margin: 5rem;
+  justify-content: center;
+  padding :4rem;
+  font-size: 5rem;
+  border-radius: 20rem;
+  color: rgb(8, 24, 167);
+}
+input [name="what"] {
+  width: 25cm;
+  padding: 10rem;
+  justify-content: center;
+  border-radius: 5rem;
+
+}
+
+form {
+  margin: 5rem;
+}
+
+button {
+  margin: 5rem;
+  color: rgb(231, 243, 243);
+  background-color: rgb(53, 62, 189);
+  border-radius: 5rem;
+}
+
+#task-list {
+  list-style-type: none;
+  padding: 0;
+  --border-color: rgb(184,184,184);
+  --radius: 0.5rem;
+}
+
+#task-list li {
+  border: 1px solid var(--border-color);
+  border-bottom: none;
+  padding:0.4rem 0.6rem;
+}
+
+#task-list li:first-child {
+  border-radius: var(--radius) var(--radius) 0 0 ;
+}
+#task-list li :last-child {
+  border-radius: 0 0 var(--radius) var(--radius);
+  border-bottom: 1px solid var(--border-color);
+}
+#task-list li:hover {
+  background-color: #721616;
+  cursor: pointer;
+}
+
+#task-list li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#task-list li span {
+  flex: 1;
+  margin-left: 0.4rem;
+}
+#task-list li .delete {
+  display: none;
+  color: grey;
+  width: 1rem;
+  height: 1rem;
+}
+#task-list li:hover .delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#task-list li:hover .delete:hover {
+  background-color: red;
+  color: white;
+  border-radius: 10em;
+  font-weight:bold;
+}
+
+#task-list li.checked span {
+  text-decoration: line-through;
+}
